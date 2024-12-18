@@ -1,10 +1,28 @@
-import React from 'react'
+import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import logo from './logo.svg'
 import './App.css'
 
+const bold = css`
+  font-weight: bold;
+`
+
+const containerStyles = css`
+  background-color: pink;
+  ${bold}
+`
+
+const Button = styled.button`
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+  ${bold}
+`
+
 function App() {
   return (
-    <div className="App">
+    <div className="App" css={containerStyles}>
+      <Button>Click me</Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
