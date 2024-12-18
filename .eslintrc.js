@@ -24,6 +24,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error',
     'react/prop-types': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
+    '@typescript-eslint/no-unused-vars': 'off',
   },
   settings: {
     react: {
