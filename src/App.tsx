@@ -1,42 +1,49 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import logo from './logo.svg'
-import './App.css'
-
-const bold = css`
-  font-weight: bold;
-`
-
-const containerStyles = css`
-  background-color: pink;
-  ${bold}
-`
-
-const Button = styled.button`
-  width: 200px;
-  height: 100px;
-  background-color: blue;
-  ${bold}
-`
+import Text from '@components/shared/Text'
+import Button from '@components/shared/Button'
 
 function App() {
   return (
-    <div className="App" css={containerStyles}>
-      <Button>Click me</Button>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Text typography="t1" display="block" color="red">
+        t1
+      </Text>
+      <Text typography="t2" color="blue">
+        t2
+      </Text>
+      <Text typography="t3" color="green">
+        t3
+      </Text>
+      <Text typography="t4" color="red">
+        t4
+      </Text>
+      <Text typography="t5" color="blue">
+        t5
+      </Text>
+      <Text typography="t6" color="green">
+        t6
+      </Text>
+      <Text typography="t7" color="red">
+        t7
+      </Text>
+
+      <div style={{ height: 10, width: '100%', background: '#efefef' }}></div>
+
+      <Button>클릭해주세요</Button>
+      <Button weak>클릭해주세요</Button>
+      <Button color="success">클릭해주세요</Button>
+      <Button color="success" weak>
+        클릭해주세요
+      </Button>
+      <Button color="error">클릭해주세요</Button>
+      <Button color="error" weak>
+        클릭해주세요
+      </Button>
+      <Button size="medium">클릭해주세요</Button>
+      <Button size="large">클릭해주세요</Button>
+      <Button full>클릭해주세요</Button>
+      <Button full disabled>
+        클릭해주세요
+      </Button>
     </div>
   )
 }
