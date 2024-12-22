@@ -1,42 +1,40 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import logo from './logo.svg'
+import Button from '@shared/Button'
+import Text from '@shared/Text'
 import './App.css'
-
-const bold = css`
-  font-weight: bold;
-`
-
-const containerStyles = css`
-  background-color: pink;
-  ${bold}
-`
-
-const Button = styled.button`
-  width: 200px;
-  height: 100px;
-  background-color: blue;
-  ${bold}
-`
 
 function App() {
   return (
-    <div className="App" css={containerStyles}>
-      <Button>Click me</Button>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Text typography="t1" display="block">
+        t1
+      </Text>
+      <Text typography="t2" color="red">
+        t2
+      </Text>
+      <Text typography="t3">t3</Text>
+      <Text typography="t4">t4</Text>
+      <Text typography="t5">t5</Text>
+      <Text typography="t6">t6</Text>
+      <Text typography="t7">t7</Text>
+
+      <div style={{ height: 10, width: '100%', backgroundColor: '#efefef' }} />
+
+      <Button>click</Button>
+      <Button color="success">click</Button>
+      <Button color="error">click</Button>
+      <Button color="primary" weak>
+        click
+      </Button>
+      <Button color="success" weak>
+        click
+      </Button>
+      <Button color="error" weak>
+        click
+      </Button>
+      <Button full>click</Button>
+      <Button full disabled>
+        click
+      </Button>
     </div>
   )
 }
