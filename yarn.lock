@@ -3353,6 +3353,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.62.9":
+  version: 5.62.9
+  resolution: "@tanstack/query-core@npm:5.62.9"
+  checksum: 10c0/3d0708ec761563bbb5c5efa97160d10ed891b63a61cc24ebc04c24d8196e7fa5cde89ea220e70546fc94066fa1034c1a368138dab3f353c82846cc5f9595a7fc
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.62.9":
+  version: 5.62.9
+  resolution: "@tanstack/react-query@npm:5.62.9"
+  dependencies:
+    "@tanstack/query-core": "npm:5.62.9"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10c0/f74faf0e91037e393bf556b6b011daf9ae6e8a33c0934d0ce92779d3cadc5e84fd2efa2610b225b3d02ba99237ebcf5fea113ae13d1d8dfa8314df01bf44e26c
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^8.5.0":
   version: 8.20.1
   resolution: "@testing-library/dom@npm:8.20.1"
@@ -3758,6 +3776,13 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10c0/ff8f54fc49621210291f815fe5b15d809fd7d032941b3180743440bd507ecdf08b9e844625fa346af568c84bf34114eb378dcdc3e921a08ba1e2a08d7e3c809c
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:^4.17.13":
+  version: 4.17.13
+  resolution: "@types/lodash@npm:4.17.13"
+  checksum: 10c0/c3d0b7efe7933ac0369b99f2f7bff9240d960680fdb74b41ed4bd1b3ca60cca1e31fe4046d9abbde778f941a41bc2a75eb629abf8659fa6c27b66efbbb0802a9
   languageName: node
   linkType: hard
 
@@ -11259,11 +11284,13 @@ __metadata:
     "@emotion/babel-plugin": "npm:^11.13.5"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
+    "@tanstack/react-query": "npm:^5.62.9"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^13.0.0"
     "@testing-library/user-event": "npm:^13.2.1"
     "@types/eslint-plugin-jsx-a11y": "npm:^6"
     "@types/jest": "npm:^27.0.1"
+    "@types/lodash": "npm:^4.17.13"
     "@types/node": "npm:^16.7.13"
     "@types/react": "npm:^18.0.0"
     "@types/react-dom": "npm:^18.0.0"
@@ -11281,11 +11308,14 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.2"
     eslint-plugin-react-hooks: "npm:^5.1.0"
     firebase: "npm:^11.1.0"
+    lodash: "npm:^4.17.21"
     prettier: "npm:^3.4.2"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-infinite-scroll-component: "npm:^6.1.0"
     react-router-dom: "npm:^7.1.0"
     react-scripts: "npm:5.0.1"
+    swiper: "npm:9"
     typescript: "npm:^4.4.2"
     web-vitals: "npm:^2.1.0"
   languageName: unknown
@@ -12598,6 +12628,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-infinite-scroll-component@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "react-infinite-scroll-component@npm:6.1.0"
+  dependencies:
+    throttle-debounce: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=16.0.0"
+  checksum: 10c0/8de02f178ae861880dddbd0c882dc70b55e21737b87fe428140d81a2c5d13c5eeba8a4fc260b1e86e4c556fdea333d6babaed55a9e5987a42b181b2d92f69cd8
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -13708,6 +13749,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: 10c0/e91f690f42ab2d4e36577a631a9d7b9bd20864ab99c1394481f64c5a0ae6922165ac0a06228560c2ccdd4f68338e795f2fd3cc16fbf9bfcc9c561bb89eb237cd
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^12.0.0":
   version: 12.0.0
   resolution: "ssri@npm:12.0.0"
@@ -14129,6 +14177,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swiper@npm:9":
+  version: 9.4.1
+  resolution: "swiper@npm:9.4.1"
+  dependencies:
+    ssr-window: "npm:^4.0.2"
+  checksum: 10c0/29feb1e92c344c32d24d7c852577b8b167816ec65bb486418816abbc8e1d6f50b3fb339780392ffa8ba91582508f804bab1e1ab3bd80d9d9b66fc323b6055445
+  languageName: node
+  linkType: hard
+
 "symbol-tree@npm:^3.2.4":
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
@@ -14326,6 +14383,13 @@ __metadata:
   version: 6.0.2
   resolution: "throat@npm:6.0.2"
   checksum: 10c0/45caf1ce86a895f71fcb9bd3de67e1df6f73a519e780765dd0cf63ca8363de08ad207cfb714bc650ee9ddeef89971517b5f3a64087fcffce2bda034697af7c18
+  languageName: node
+  linkType: hard
+
+"throttle-debounce@npm:^2.1.0":
+  version: 2.3.0
+  resolution: "throttle-debounce@npm:2.3.0"
+  checksum: 10c0/41648e4cf46f935818af32ecac34f9876c618f24e300551cbe3a0ca2c5828cb8d2f9b73e6e1e2f8c64237f70fbc8c541f9b5c9114da70b33b1ed10ba4cc6b15f
   languageName: node
   linkType: hard
 

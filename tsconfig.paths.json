@@ -10,7 +10,7 @@
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@remotes/*": ["src/remotes/*"],
-      "@constants": ["src/constants/index.ts"]
+      "@constants": ["src/constants/index"]
     }
   }
 }
