@@ -1,5 +1,5 @@
-import Flex from './Flex'
 import { css } from '@emotion/react'
+import Flex from './Flex'
 import Text from './Text'
 
 interface ListRowProps {
@@ -8,6 +8,7 @@ interface ListRowProps {
   right?: React.ReactNode
   withArrow?: boolean
   onClick?: () => void
+  as?: 'li' | 'div'
 }
 
 const ListRow = ({
@@ -16,14 +17,10 @@ const ListRow = ({
   right,
   withArrow,
   onClick,
+  as = 'li',
 }: ListRowProps) => {
   return (
-    <Flex
-      as={'li'}
-      align="center"
-      css={listRowContainerStyles}
-      onClick={onClick}
-    >
+    <Flex as={as} align="center" css={listRowContainerStyles} onClick={onClick}>
       {left && <Flex css={listRowLeftStyles}>{left}</Flex>}
       <Flex css={listRowCenterStyles}>{contents}</Flex>
       {right && <Flex css={listRowRightStyles}>{right}</Flex>}
