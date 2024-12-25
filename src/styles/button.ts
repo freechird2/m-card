@@ -3,33 +3,33 @@ import { colors } from './colorPalette'
 
 export const buttonColorMap = {
   primary: css`
-    background-color: ${colors.blue};
     color: ${colors.white};
+    background-color: ${colors.blue};
   `,
   success: css`
-    background-color: ${colors.green};
     color: ${colors.white};
+    background-color: ${colors.green};
   `,
   error: css`
-    background-color: ${colors.red};
     color: ${colors.white};
+    background-color: ${colors.red};
   `,
 }
 
 export const buttonWeakMap = {
   primary: css`
-    background-color: ${colors.white};
     color: ${colors.blue};
+    background-color: ${colors.white};
     border: 1px solid ${colors.blue};
   `,
   success: css`
-    background-color: ${colors.white};
     color: ${colors.green};
+    background-color: ${colors.white};
     border: 1px solid ${colors.green};
   `,
   error: css`
-    background-color: ${colors.white};
     color: ${colors.red};
+    background-color: ${colors.white};
     border: 1px solid ${colors.red};
   `,
 }
@@ -50,5 +50,4 @@ export const buttonSizeMap = {
 }
 
 export type ButtonColor = keyof typeof buttonColorMap
-export type ButtonWeak = keyof typeof buttonWeakMap
 export type ButtonSize = keyof typeof buttonSizeMap

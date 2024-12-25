@@ -17,11 +17,11 @@ interface ButtonProps {
 }
 
 const Button = styled.button<ButtonProps>(
-  () => ({
+  {
     cursor: 'pointer',
     fontWeight: 'bold',
     borderRadius: '6px',
-  }),
+  },
   ({ color = 'primary', weak }) =>
     weak ? buttonWeakMap[color] : buttonColorMap[color],
   ({ size = 'small' }) => buttonSizeMap[size],
@@ -32,7 +32,12 @@ const Button = styled.button<ButtonProps>(
       width: 100%;
       border-radius: 0;
     `,
-  ({ disabled }) => disabled && { opacity: 0.5, cursor: 'default' },
+  ({ disabled }) =>
+    disabled &&
+    css`
+      opacity: 0.26;
+      cursor: initial;
+    `,
 )
 
 export default Button

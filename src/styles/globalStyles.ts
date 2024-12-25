@@ -4,6 +4,11 @@ import { colorPalette } from './colorPalette'
 export default css`
   ${colorPalette}
 
+  :root {
+    --dimmed-zindex: 10;
+    --alert-zindex: 11;
+  }
+
   html,
   body,
   div,
@@ -141,5 +146,9 @@ export default css`
     font: inherit;
 
     line-height: normal;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `

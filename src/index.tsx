@@ -1,4 +1,6 @@
+import { AlertContextProvider } from '@contexts/AlertContext'
 import { Global } from '@emotion/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
@@ -6,11 +8,20 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 import globalStyles from './styles/globalStyles'
 
+const queryClient = new QueryClient({
+  defaultOptions: {},
+})
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
 root.render(
   <React.StrictMode>
     <Global styles={globalStyles} />
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <AlertContextProvider>
+        <App />
+      </AlertContextProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
 )
 
