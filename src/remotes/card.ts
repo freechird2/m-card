@@ -1,16 +1,17 @@
-import {
-  collection,
-  getDocs,
-  QuerySnapshot,
-  query,
-  limit,
-  startAfter,
-  QueryDocumentSnapshot,
-  DocumentData,
-} from 'firebase/firestore'
-import { store } from '@remotes/firebase'
 import { COLLECTIONS } from '@constants'
 import { Card } from '@models/card'
+import { store } from '@remotes/firebase'
+import {
+  collection,
+  doc,
+  DocumentData,
+  getDoc,
+  getDocs,
+  limit,
+  query,
+  QueryDocumentSnapshot,
+  startAfter,
+} from 'firebase/firestore'
 
 export const getCards = async (
   pageParam?: QueryDocumentSnapshot<DocumentData>,
@@ -33,4 +34,13 @@ export const getCards = async (
   }))
 
   return { items, lastVisible }
+}
+
+export const getCard = async (id: string) => {
+  const snapshot = await getDoc(doc(store, COLLECTIONS.CARD, id))
+
+  return {
+    ...(snapshot.data() as Card),
+    id,
+  }
 }
