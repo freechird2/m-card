@@ -1,7 +1,11 @@
-import React from 'react'
+import Form from '@components/signin/Form'
 
 const SigninPage = () => {
-  return <div>SigninPage</div>
+  return (
+    <div>
+      <Form />
+    </div>
+  )
 }
 
 export default SigninPage
