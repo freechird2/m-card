@@ -20,6 +20,10 @@ const Input = styled.input`
   &[aria-invalid='true'] {
     border-color: ${colors.red};
   }
+
+  &::placeholder {
+    color: ${colors.grey};
+  }
 `
 
 export default Input
