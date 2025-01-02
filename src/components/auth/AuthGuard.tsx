@@ -1,18 +1,29 @@
+import { userAtom } from '@/atoms/user'
 import { auth } from '@remotes/firebase'
 import { onAuthStateChanged } from 'firebase/auth'
 import { useState } from 'react'
+import { useSetRecoilState } from 'recoil'
 
 const AuthGuard = ({ children }: { children: React.ReactNode }) => {
   const [initialize, setInitialize] = useState(false)
+  const setUser = useSetRecoilState(userAtom)
 
   onAuthStateChanged(auth, (user) => {
-    console.log('user', user)
+    if (user) {
+      setUser({
+        uid: user.uid,
+        email: user.email ?? '',
+        displayName: user.displayName ?? '',
+      })
+    } else {
+      setUser(null)
+    }
 
     setInitialize(true)
   })
 
   if (!initialize) {
-    return <>로딩 중...</>
+    return null
   }
 
   return <>{children}</>

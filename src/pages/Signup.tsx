@@ -1,11 +1,14 @@
+import Form from '@components/signup/Form'
+import { COLLECTIONS } from '@constants'
+import { FormValues } from '@models/signup'
+import { auth, store } from '@remotes/firebase'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { collection, doc, setDoc } from 'firebase/firestore'
-import { FormValues } from '@models/signup'
-import Form from '@components/signup/Form'
-import { auth, store } from '@remotes/firebase'
-import { COLLECTIONS } from '@constants'
+import { useNavigate } from 'react-router-dom'
 
 const SignupPage = () => {
+  const navigate = useNavigate()
+
   const handleSubmit = async (formValues: FormValues) => {
     const { email, password, name } = formValues
 
@@ -20,6 +23,8 @@ const SignupPage = () => {
     }
 
     await setDoc(doc(collection(store, COLLECTIONS.USER), user.uid), newUser)
+
+    navigate('/')
   }
 
   return (
