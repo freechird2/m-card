@@ -7,11 +7,13 @@ import Button from './Button'
 interface FixedBottomButtonProps {
   label: string
   onClick: () => void
+  disabled?: boolean
 }
 
 export const FixedBottomButton = ({
   label,
   onClick,
+  disabled,
 }: FixedBottomButtonProps) => {
   const $portalRoot = document.getElementById('root-portal')
 
@@ -33,7 +35,13 @@ export const FixedBottomButton = ({
         transform: 'translateY(0)',
       }}
     >
-      <Button size="medium" onClick={onClick} full css={buttonStyles}>
+      <Button
+        size="medium"
+        onClick={onClick}
+        full
+        css={buttonStyles}
+        disabled={disabled}
+      >
         {label}
       </Button>
     </motion.div>,

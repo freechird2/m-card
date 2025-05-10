@@ -8,7 +8,7 @@ import Text from '@shared/Text'
 import Input from '@shared/Input'
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
-  label: string
+  label?: string
   hasError?: boolean
   helpMessage?: React.ReactNode
 }
